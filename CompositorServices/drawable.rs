@@ -5,6 +5,8 @@ use core::ffi::*;
 use core::marker::{PhantomData, PhantomPinned};
 use core::ptr::NonNull;
 use objc2::__framework_prelude::*;
+#[cfg(feature = "objc2-ar-kit")]
+use objc2_ar_kit::*;
 #[cfg(feature = "objc2-metal")]
 use objc2_metal::*;
 
@@ -438,6 +440,68 @@ impl cp_drawable {
             fn cp_drawable_get_view(drawable: cp_drawable_t, index: usize) -> cp_view_t;
         }
         unsafe { cp_drawable_get_view(drawable, index) }
+    }
+
+    /// Specifies the world position and orientation to apply to the current
+    /// frame.
+    ///
+    /// - Parameters:
+    /// - drawable: The drawable for a frame.
+    /// - device_anchor: The `ar_device_anchor` that specifies the 3D rotation and translation
+    /// factors you applied to your content when you rendered the frame.
+    ///
+    /// Device anchor information tells the compositor the position and orientation
+    /// you used to render your frame's content. If you specify a device anchor value,
+    /// the compositor compares your value against the hardware-provided device anchor
+    /// information before displaying the frame onscreen. If the device anchor values
+    /// don't match, the compositor adjusts the pixels of your frame to align it
+    /// with the hardware device anchor.
+    ///
+    /// Device anchor information is particularly important on a head-mounted display
+    /// because it helps your content more closely match the actual movements
+    /// of someone's head. Because the actual device anchor can change between the time
+    /// you encode your drawing commands and the time the frame appears onscreen,
+    /// you must predict the device anchor in advance using available information. The
+    /// ``cp_frame_timing_get_optimal_input_time`` function provides a good
+    /// time to start the prediction for each frame. Use the
+    /// ``cp_frame_timing_get_presentation_time`` function to get the presentation
+    /// time for the frame.
+    ///
+    /// # Safety
+    ///
+    /// - `drawable` must be a valid pointer.
+    /// - `device_anchor` must be a valid pointer or null.
+    #[doc(alias = "cp_drawable_set_device_anchor")]
+    #[cfg(feature = "objc2-ar-kit")]
+    #[inline]
+    pub unsafe fn set_device_anchor(drawable: cp_drawable_t, device_anchor: ar_device_anchor_t) {
+        extern "C-unwind" {
+            fn cp_drawable_set_device_anchor(
+                drawable: cp_drawable_t,
+                device_anchor: ar_device_anchor_t,
+            );
+        }
+        unsafe { cp_drawable_set_device_anchor(drawable, device_anchor) }
+    }
+
+    /// Returns the predicted device anchor information you specified for the frame.
+    ///
+    /// - Parameters:
+    /// - drawable: The drawable for a frame.
+    /// - Returns: The current device anchor for the frame, or ``null``
+    /// if you didn't specify a device anchor.
+    ///
+    /// # Safety
+    ///
+    /// `drawable` must be a valid pointer.
+    #[doc(alias = "cp_drawable_get_device_anchor")]
+    #[cfg(feature = "objc2-ar-kit")]
+    #[inline]
+    pub unsafe fn device_anchor(drawable: cp_drawable_t) -> ar_device_anchor_t {
+        extern "C-unwind" {
+            fn cp_drawable_get_device_anchor(drawable: cp_drawable_t) -> ar_device_anchor_t;
+        }
+        unsafe { cp_drawable_get_device_anchor(drawable) }
     }
 
     /// Encodes a notification event to the specified command buffer to present

@@ -21,486 +21,744 @@
 #[link(name = "ARKit", kind = "framework")]
 extern "C" {}
 
-#[cfg(feature = "ARAnchor")]
-#[path = "ARAnchor.rs"]
-mod __ARAnchor;
-#[cfg(feature = "ARAppClipCodeAnchor")]
-#[path = "ARAppClipCodeAnchor.rs"]
-mod __ARAppClipCodeAnchor;
-#[cfg(feature = "ARBody2D")]
-#[path = "ARBody2D.rs"]
-mod __ARBody2D;
-#[cfg(feature = "ARBodyAnchor")]
-#[path = "ARBodyAnchor.rs"]
-mod __ARBodyAnchor;
-#[cfg(feature = "ARCamera")]
-#[path = "ARCamera.rs"]
-mod __ARCamera;
-#[cfg(feature = "ARCoachingOverlayView")]
-#[path = "ARCoachingOverlayView.rs"]
-mod __ARCoachingOverlayView;
-#[cfg(feature = "ARCollaborationData")]
-#[path = "ARCollaborationData.rs"]
-mod __ARCollaborationData;
-#[cfg(feature = "ARConfiguration")]
-#[path = "ARConfiguration.rs"]
-mod __ARConfiguration;
-#[cfg(feature = "ARDepthData")]
-#[path = "ARDepthData.rs"]
-mod __ARDepthData;
-#[cfg(feature = "AREnvironmentProbeAnchor")]
-#[path = "AREnvironmentProbeAnchor.rs"]
-mod __AREnvironmentProbeAnchor;
-#[cfg(feature = "ARError")]
-#[path = "ARError.rs"]
-mod __ARError;
-#[cfg(feature = "ARFaceAnchor")]
-#[path = "ARFaceAnchor.rs"]
-mod __ARFaceAnchor;
-#[cfg(feature = "ARFaceGeometry")]
-#[path = "ARFaceGeometry.rs"]
-mod __ARFaceGeometry;
-#[cfg(feature = "ARFrame")]
-#[path = "ARFrame.rs"]
-mod __ARFrame;
-#[cfg(feature = "ARGeoAnchor")]
-#[path = "ARGeoAnchor.rs"]
-mod __ARGeoAnchor;
-#[cfg(feature = "ARGeoTrackingTypes")]
-#[path = "ARGeoTrackingTypes.rs"]
-mod __ARGeoTrackingTypes;
-#[cfg(feature = "ARHitTestResult")]
-#[path = "ARHitTestResult.rs"]
-mod __ARHitTestResult;
-#[cfg(feature = "ARImageAnchor")]
-#[path = "ARImageAnchor.rs"]
-mod __ARImageAnchor;
-#[cfg(feature = "ARKitCore")]
-#[path = "ARKitCore.rs"]
-mod __ARKitCore;
-#[cfg(feature = "ARKitFoundation")]
-#[path = "ARKitFoundation.rs"]
-mod __ARKitFoundation;
-#[cfg(feature = "ARKitUI")]
-#[path = "ARKitUI.rs"]
-mod __ARKitUI;
-#[cfg(feature = "ARLightEstimate")]
-#[path = "ARLightEstimate.rs"]
-mod __ARLightEstimate;
-#[cfg(feature = "ARMatteGenerator")]
-#[path = "ARMatteGenerator.rs"]
-mod __ARMatteGenerator;
-#[cfg(feature = "ARMeshAnchor")]
-#[path = "ARMeshAnchor.rs"]
-mod __ARMeshAnchor;
-#[cfg(feature = "ARMeshGeometry")]
-#[path = "ARMeshGeometry.rs"]
-mod __ARMeshGeometry;
-#[cfg(feature = "ARObjectAnchor")]
-#[path = "ARObjectAnchor.rs"]
-mod __ARObjectAnchor;
-#[cfg(feature = "ARParticipantAnchor")]
-#[path = "ARParticipantAnchor.rs"]
-mod __ARParticipantAnchor;
-#[cfg(feature = "ARPlaneAnchor")]
-#[path = "ARPlaneAnchor.rs"]
-mod __ARPlaneAnchor;
-#[cfg(feature = "ARPlaneDetectionTypes")]
-#[path = "ARPlaneDetectionTypes.rs"]
-mod __ARPlaneDetectionTypes;
-#[cfg(feature = "ARPlaneGeometry")]
-#[path = "ARPlaneGeometry.rs"]
-mod __ARPlaneGeometry;
-#[cfg(feature = "ARPointCloud")]
-#[path = "ARPointCloud.rs"]
-mod __ARPointCloud;
-#[cfg(feature = "ARRaycastQuery")]
-#[path = "ARRaycastQuery.rs"]
-mod __ARRaycastQuery;
-#[cfg(feature = "ARRaycastResult")]
-#[path = "ARRaycastResult.rs"]
-mod __ARRaycastResult;
-#[cfg(feature = "ARReferenceImage")]
-#[path = "ARReferenceImage.rs"]
-mod __ARReferenceImage;
-#[cfg(feature = "ARReferenceObject")]
-#[path = "ARReferenceObject.rs"]
-mod __ARReferenceObject;
-#[cfg(feature = "ARSCNFaceGeometry")]
-#[path = "ARSCNFaceGeometry.rs"]
-mod __ARSCNFaceGeometry;
-#[cfg(feature = "ARSCNPlaneGeometry")]
-#[path = "ARSCNPlaneGeometry.rs"]
-mod __ARSCNPlaneGeometry;
-#[cfg(feature = "ARSCNView")]
-#[path = "ARSCNView.rs"]
-mod __ARSCNView;
-#[cfg(feature = "ARSKView")]
-#[path = "ARSKView.rs"]
-mod __ARSKView;
-#[cfg(feature = "ARSession")]
-#[path = "ARSession.rs"]
-mod __ARSession;
-#[cfg(feature = "ARSkeleton")]
-#[path = "ARSkeleton.rs"]
-mod __ARSkeleton;
-#[cfg(feature = "ARSkeletonDefinition")]
-#[path = "ARSkeletonDefinition.rs"]
-mod __ARSkeletonDefinition;
-#[cfg(feature = "ARTrackedRaycast")]
-#[path = "ARTrackedRaycast.rs"]
-mod __ARTrackedRaycast;
-#[cfg(feature = "ARTrackingStatusTypes")]
-#[path = "ARTrackingStatusTypes.rs"]
-mod __ARTrackingStatusTypes;
-#[cfg(feature = "ARVideoFormat")]
-#[path = "ARVideoFormat.rs"]
-mod __ARVideoFormat;
-#[cfg(feature = "ARWorldMap")]
-#[path = "ARWorldMap.rs"]
-mod __ARWorldMap;
+#[cfg(feature = "accessory_tracking")]
+#[path = "accessory_tracking.rs"]
+mod __accessory_tracking;
+#[cfg(feature = "anchor")]
+#[path = "anchor.rs"]
+mod __anchor;
+#[cfg(feature = "authorization")]
+#[path = "authorization.rs"]
+mod __authorization;
+#[cfg(feature = "barcode_detection")]
+#[path = "barcode_detection.rs"]
+mod __barcode_detection;
+#[cfg(feature = "camera_frame_provider")]
+#[path = "camera_frame_provider.rs"]
+mod __camera_frame_provider;
+#[cfg(feature = "camera_region")]
+#[path = "camera_region.rs"]
+mod __camera_region;
+#[cfg(feature = "data")]
+#[path = "data.rs"]
+mod __data;
+#[cfg(feature = "data_provider")]
+#[path = "data_provider.rs"]
+mod __data_provider;
+#[cfg(feature = "environment_light_estimation")]
+#[path = "environment_light_estimation.rs"]
+mod __environment_light_estimation;
+#[cfg(feature = "error")]
+#[path = "error.rs"]
+mod __error;
+#[cfg(feature = "hand_skeleton")]
+#[path = "hand_skeleton.rs"]
+mod __hand_skeleton;
+#[cfg(feature = "hand_tracking")]
+#[path = "hand_tracking.rs"]
+mod __hand_tracking;
+#[cfg(feature = "identifiers")]
+#[path = "identifiers.rs"]
+mod __identifiers;
+#[cfg(feature = "image_tracking")]
+#[path = "image_tracking.rs"]
+mod __image_tracking;
+#[cfg(feature = "object")]
+#[path = "object.rs"]
+mod __object;
+#[cfg(feature = "object_tracking")]
+#[path = "object_tracking.rs"]
+mod __object_tracking;
+#[cfg(feature = "plane_detection")]
+#[path = "plane_detection.rs"]
+mod __plane_detection;
+#[cfg(feature = "room_tracking")]
+#[path = "room_tracking.rs"]
+mod __room_tracking;
+#[cfg(feature = "scene_reconstruction")]
+#[path = "scene_reconstruction.rs"]
+mod __scene_reconstruction;
+#[cfg(feature = "session")]
+#[path = "session.rs"]
+mod __session;
+#[cfg(feature = "shared_coordinate_space")]
+#[path = "shared_coordinate_space.rs"]
+mod __shared_coordinate_space;
+#[cfg(feature = "skeleton_joint")]
+#[path = "skeleton_joint.rs"]
+mod __skeleton_joint;
+#[cfg(feature = "stereo_properties")]
+#[path = "stereo_properties.rs"]
+mod __stereo_properties;
+#[cfg(feature = "strings_collection")]
+#[path = "strings_collection.rs"]
+mod __strings_collection;
+#[cfg(feature = "transform_correction")]
+#[path = "transform_correction.rs"]
+mod __transform_correction;
+#[cfg(feature = "world_tracking")]
+#[path = "world_tracking.rs"]
+mod __world_tracking;
 
-#[cfg(all(feature = "ARAnchor", feature = "objc2"))]
-pub use self::__ARAnchor::ARAnchor;
-#[cfg(all(feature = "ARAnchor", feature = "objc2", feature = "objc2-foundation"))]
-pub use self::__ARAnchor::ARAnchorCopying;
-#[cfg(all(feature = "ARAnchor", feature = "objc2"))]
-pub use self::__ARAnchor::ARTrackable;
+#[cfg(all(feature = "accessory_tracking", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessories_enumerator_function_t;
+#[cfg(all(feature = "accessory_tracking", feature = "block2", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessories_enumerator_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessories_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_anchor_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_anchor_tracking_state_t;
+#[cfg(all(feature = "accessory_tracking", feature = "anchor", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessory_anchors_enumerator_function_t;
 #[cfg(all(
-    feature = "ARAnchor",
-    feature = "ARAppClipCodeAnchor",
+    feature = "accessory_tracking",
+    feature = "anchor",
+    feature = "block2",
     feature = "objc2"
 ))]
-pub use self::__ARAppClipCodeAnchor::ARAppClipCodeAnchor;
-#[cfg(all(feature = "ARAppClipCodeAnchor", feature = "objc2"))]
-pub use self::__ARAppClipCodeAnchor::ARAppClipCodeURLDecodingState;
-#[cfg(all(feature = "ARBody2D", feature = "objc2"))]
-pub use self::__ARBody2D::ARBody2D;
-#[cfg(all(feature = "ARAnchor", feature = "ARBodyAnchor", feature = "objc2"))]
-pub use self::__ARBodyAnchor::ARBodyAnchor;
-#[cfg(all(feature = "ARCamera", feature = "objc2"))]
-pub use self::__ARCamera::ARCamera;
-#[cfg(all(feature = "ARCoachingOverlayView", feature = "objc2"))]
-pub use self::__ARCoachingOverlayView::ARCoachingGoal;
+pub use self::__accessory_tracking::ar_accessory_anchors_enumerator_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_anchors_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_chirality_t;
+#[cfg(all(feature = "accessory_tracking", feature = "error", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessory_device_load_completion_handler_function_t;
 #[cfg(all(
-    feature = "ARCoachingOverlayView",
-    feature = "objc2",
-    feature = "objc2-ui-kit"
-))]
-pub use self::__ARCoachingOverlayView::ARCoachingOverlayView;
-#[cfg(all(feature = "ARCoachingOverlayView", feature = "objc2"))]
-pub use self::__ARCoachingOverlayView::ARCoachingOverlayViewDelegate;
-#[cfg(all(feature = "ARCollaborationData", feature = "objc2"))]
-pub use self::__ARCollaborationData::ARCollaborationData;
-#[cfg(all(feature = "ARCollaborationData", feature = "objc2"))]
-pub use self::__ARCollaborationData::ARCollaborationDataPriority;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARBodyTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::AREnvironmentTexturing;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARFaceTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARFrameSemantics;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARGeoTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARImageTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARObjectScanningConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::AROrientationTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARPositionalTrackingConfiguration;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARSceneReconstruction;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARWorldAlignment;
-#[cfg(all(feature = "ARConfiguration", feature = "objc2"))]
-pub use self::__ARConfiguration::ARWorldTrackingConfiguration;
-#[cfg(all(feature = "ARDepthData", feature = "objc2"))]
-pub use self::__ARDepthData::ARConfidenceLevel;
-#[cfg(all(feature = "ARDepthData", feature = "objc2"))]
-pub use self::__ARDepthData::ARDepthData;
-#[cfg(all(
-    feature = "ARAnchor",
-    feature = "AREnvironmentProbeAnchor",
+    feature = "accessory_tracking",
+    feature = "block2",
+    feature = "error",
     feature = "objc2"
 ))]
-pub use self::__AREnvironmentProbeAnchor::AREnvironmentProbeAnchor;
-#[cfg(all(feature = "ARError", feature = "objc2"))]
-pub use self::__ARError::ARErrorCode;
-#[cfg(all(feature = "ARError", feature = "objc2-foundation"))]
-pub use self::__ARError::ARErrorDomain;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocation;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationBrowDownLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationBrowDownRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationBrowInnerUp;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationBrowOuterUpLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationBrowOuterUpRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationCheekPuff;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationCheekSquintLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationCheekSquintRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeBlinkLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeBlinkRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookDownLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookDownRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookInLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookInRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookOutLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookOutRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookUpLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeLookUpRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeSquintLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeSquintRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeWideLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationEyeWideRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationJawForward;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationJawLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationJawOpen;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationJawRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthClose;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthDimpleLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthDimpleRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthFrownLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthFrownRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthFunnel;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthLowerDownLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthLowerDownRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthPressLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthPressRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthPucker;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthRollLower;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthRollUpper;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthShrugLower;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthShrugUpper;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthSmileLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthSmileRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthStretchLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthStretchRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthUpperUpLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationMouthUpperUpRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationNoseSneerLeft;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationNoseSneerRight;
-#[cfg(all(feature = "ARFaceAnchor", feature = "objc2-foundation"))]
-pub use self::__ARFaceAnchor::ARBlendShapeLocationTongueOut;
-#[cfg(all(feature = "ARAnchor", feature = "ARFaceAnchor", feature = "objc2"))]
-pub use self::__ARFaceAnchor::ARFaceAnchor;
-#[cfg(all(feature = "ARFaceGeometry", feature = "objc2"))]
-pub use self::__ARFaceGeometry::ARFaceGeometry;
-#[cfg(all(feature = "ARFrame", feature = "objc2"))]
-pub use self::__ARFrame::ARFrame;
-#[cfg(feature = "ARFrame")]
-pub use self::__ARFrame::ARSegmentationClass;
-#[cfg(all(feature = "ARFrame", feature = "objc2"))]
-pub use self::__ARFrame::ARWorldMappingStatus;
-#[cfg(all(feature = "ARAnchor", feature = "ARGeoAnchor", feature = "objc2"))]
-pub use self::__ARGeoAnchor::ARGeoAnchor;
-#[cfg(all(feature = "ARGeoTrackingTypes", feature = "objc2"))]
-pub use self::__ARGeoTrackingTypes::ARAltitudeSource;
-#[cfg(all(feature = "ARGeoTrackingTypes", feature = "objc2"))]
-pub use self::__ARGeoTrackingTypes::ARGeoTrackingAccuracy;
-#[cfg(all(feature = "ARGeoTrackingTypes", feature = "objc2"))]
-pub use self::__ARGeoTrackingTypes::ARGeoTrackingState;
-#[cfg(all(feature = "ARGeoTrackingTypes", feature = "objc2"))]
-pub use self::__ARGeoTrackingTypes::ARGeoTrackingStateReason;
-#[cfg(all(feature = "ARGeoTrackingTypes", feature = "objc2"))]
-pub use self::__ARGeoTrackingTypes::ARGeoTrackingStatus;
-#[cfg(all(feature = "ARHitTestResult", feature = "objc2"))]
-pub use self::__ARHitTestResult::ARHitTestResult;
-#[cfg(all(feature = "ARHitTestResult", feature = "objc2"))]
-pub use self::__ARHitTestResult::ARHitTestResultType;
-#[cfg(all(feature = "ARAnchor", feature = "ARImageAnchor", feature = "objc2"))]
-pub use self::__ARImageAnchor::ARImageAnchor;
-#[cfg(all(feature = "ARLightEstimate", feature = "objc2"))]
-pub use self::__ARLightEstimate::ARDirectionalLightEstimate;
-#[cfg(all(feature = "ARLightEstimate", feature = "objc2"))]
-pub use self::__ARLightEstimate::ARLightEstimate;
-#[cfg(all(feature = "ARMatteGenerator", feature = "objc2"))]
-pub use self::__ARMatteGenerator::ARMatteGenerator;
-#[cfg(all(feature = "ARMatteGenerator", feature = "objc2"))]
-pub use self::__ARMatteGenerator::ARMatteResolution;
-#[cfg(all(feature = "ARAnchor", feature = "ARMeshAnchor", feature = "objc2"))]
-pub use self::__ARMeshAnchor::ARMeshAnchor;
-#[cfg(all(feature = "ARMeshGeometry", feature = "objc2"))]
-pub use self::__ARMeshGeometry::ARGeometryElement;
-#[cfg(all(feature = "ARMeshGeometry", feature = "objc2"))]
-pub use self::__ARMeshGeometry::ARGeometryPrimitiveType;
-#[cfg(all(feature = "ARMeshGeometry", feature = "objc2"))]
-pub use self::__ARMeshGeometry::ARGeometrySource;
-#[cfg(all(feature = "ARMeshGeometry", feature = "objc2"))]
-pub use self::__ARMeshGeometry::ARMeshClassification;
-#[cfg(all(feature = "ARMeshGeometry", feature = "objc2"))]
-pub use self::__ARMeshGeometry::ARMeshGeometry;
-#[cfg(all(feature = "ARAnchor", feature = "ARObjectAnchor", feature = "objc2"))]
-pub use self::__ARObjectAnchor::ARObjectAnchor;
+pub use self::__accessory_tracking::ar_accessory_device_load_completion_handler_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_location_name_aim;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_location_name_grip;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_location_name_grip_surface;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_source_type_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_tracking_configuration_t;
+#[cfg(all(feature = "accessory_tracking", feature = "error"))]
+pub use self::__accessory_tracking::ar_accessory_tracking_error_code_t;
+#[cfg(feature = "accessory_tracking")]
+pub use self::__accessory_tracking::ar_accessory_tracking_provider_t;
+#[cfg(all(feature = "accessory_tracking", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessory_tracking_update_handler_function_t;
+#[cfg(all(feature = "accessory_tracking", feature = "block2", feature = "objc2"))]
+pub use self::__accessory_tracking::ar_accessory_tracking_update_handler_t;
+#[cfg(feature = "anchor")]
+pub use self::__anchor::ar_anchor_t;
+#[cfg(feature = "anchor")]
+pub use self::__anchor::ar_trackable_anchor_t;
+#[cfg(feature = "authorization")]
+pub use self::__authorization::ar_authorization_result_t;
+#[cfg(all(feature = "authorization", feature = "objc2"))]
+pub use self::__authorization::ar_authorization_results_enumerator_function_t;
+#[cfg(all(feature = "authorization", feature = "block2", feature = "objc2"))]
+pub use self::__authorization::ar_authorization_results_enumerator_t;
+#[cfg(feature = "authorization")]
+pub use self::__authorization::ar_authorization_results_t;
+#[cfg(feature = "authorization")]
+pub use self::__authorization::ar_authorization_status_t;
+#[cfg(feature = "authorization")]
+pub use self::__authorization::ar_authorization_type_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_anchor_t;
+#[cfg(all(feature = "anchor", feature = "barcode_detection", feature = "objc2"))]
+pub use self::__barcode_detection::ar_barcode_anchors_enumerator_function_t;
 #[cfg(all(
-    feature = "ARAnchor",
-    feature = "ARParticipantAnchor",
+    feature = "anchor",
+    feature = "barcode_detection",
+    feature = "block2",
     feature = "objc2"
 ))]
-pub use self::__ARParticipantAnchor::ARParticipantAnchor;
-#[cfg(all(feature = "ARAnchor", feature = "ARPlaneAnchor", feature = "objc2"))]
-pub use self::__ARPlaneAnchor::ARPlaneAnchor;
-#[cfg(all(feature = "ARPlaneAnchor", feature = "objc2"))]
-pub use self::__ARPlaneAnchor::ARPlaneAnchorAlignment;
-#[cfg(all(feature = "ARPlaneAnchor", feature = "objc2"))]
-pub use self::__ARPlaneAnchor::ARPlaneClassification;
-#[cfg(all(feature = "ARPlaneAnchor", feature = "objc2"))]
-pub use self::__ARPlaneAnchor::ARPlaneClassificationStatus;
-#[cfg(all(feature = "ARPlaneAnchor", feature = "objc2"))]
-pub use self::__ARPlaneAnchor::ARPlaneExtent;
-#[cfg(all(feature = "ARPlaneDetectionTypes", feature = "objc2"))]
-pub use self::__ARPlaneDetectionTypes::ARPlaneDetection;
-#[cfg(all(feature = "ARPlaneGeometry", feature = "objc2"))]
-pub use self::__ARPlaneGeometry::ARPlaneGeometry;
-#[cfg(all(feature = "ARPointCloud", feature = "objc2"))]
-pub use self::__ARPointCloud::ARPointCloud;
-#[cfg(all(feature = "ARRaycastQuery", feature = "objc2"))]
-pub use self::__ARRaycastQuery::ARRaycastQuery;
-#[cfg(all(feature = "ARRaycastQuery", feature = "objc2"))]
-pub use self::__ARRaycastQuery::ARRaycastTarget;
-#[cfg(all(feature = "ARRaycastQuery", feature = "objc2"))]
-pub use self::__ARRaycastQuery::ARRaycastTargetAlignment;
-#[cfg(all(feature = "ARRaycastResult", feature = "objc2"))]
-pub use self::__ARRaycastResult::ARRaycastResult;
-#[cfg(all(feature = "ARReferenceImage", feature = "objc2"))]
-pub use self::__ARReferenceImage::ARReferenceImage;
-#[cfg(all(feature = "ARReferenceObject", feature = "objc2"))]
-pub use self::__ARReferenceObject::ARReferenceObject;
-#[cfg(all(feature = "ARReferenceObject", feature = "objc2-foundation"))]
-pub use self::__ARReferenceObject::ARReferenceObjectArchiveExtension;
+pub use self::__barcode_detection::ar_barcode_anchors_enumerator_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_anchors_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_detection_callbacks_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_detection_configuration_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_detection_provider_t;
+#[cfg(feature = "barcode_detection")]
+pub use self::__barcode_detection::ar_barcode_detection_symbology_t;
+#[cfg(all(feature = "barcode_detection", feature = "objc2"))]
+pub use self::__barcode_detection::ar_barcode_detection_update_handler_function_t;
+#[cfg(all(feature = "barcode_detection", feature = "block2", feature = "objc2"))]
+pub use self::__barcode_detection::ar_barcode_detection_update_handler_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_frame_parameters_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_frame_provider_t;
+#[cfg(all(feature = "camera_frame_provider", feature = "objc2"))]
+pub use self::__camera_frame_provider::ar_camera_frame_sample_enumerator_function_t;
 #[cfg(all(
-    feature = "ARSCNFaceGeometry",
-    feature = "objc2",
-    feature = "objc2-scene-kit"
+    feature = "block2",
+    feature = "camera_frame_provider",
+    feature = "objc2"
 ))]
-pub use self::__ARSCNFaceGeometry::ARSCNFaceGeometry;
+pub use self::__camera_frame_provider::ar_camera_frame_sample_enumerator_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_frame_sample_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_frame_samples_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_frame_t;
+#[cfg(all(feature = "camera_frame_provider", feature = "objc2"))]
+pub use self::__camera_frame_provider::ar_camera_frame_update_handler_function_t;
 #[cfg(all(
-    feature = "ARSCNPlaneGeometry",
-    feature = "objc2",
-    feature = "objc2-scene-kit"
+    feature = "block2",
+    feature = "camera_frame_provider",
+    feature = "objc2"
 ))]
-pub use self::__ARSCNPlaneGeometry::ARSCNPlaneGeometry;
-#[cfg(all(feature = "ARSCNView", feature = "objc2-scene-kit"))]
-pub use self::__ARSCNView::ARSCNDebugOptionShowFeaturePoints;
-#[cfg(all(feature = "ARSCNView", feature = "objc2-scene-kit"))]
-pub use self::__ARSCNView::ARSCNDebugOptionShowWorldOrigin;
-#[cfg(all(feature = "ARSCNView", feature = "objc2-scene-kit"))]
-pub use self::__ARSCNView::ARSCNDebugOptions;
+pub use self::__camera_frame_provider::ar_camera_frame_update_handler_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_position_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_rectification_type_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_type_t;
+#[cfg(all(feature = "camera_frame_provider", feature = "objc2"))]
+pub use self::__camera_frame_provider::ar_camera_video_format_enumerator_function_t;
 #[cfg(all(
-    feature = "ARSCNView",
-    feature = "ARSession",
-    feature = "objc2",
-    feature = "objc2-scene-kit"
+    feature = "block2",
+    feature = "camera_frame_provider",
+    feature = "objc2"
 ))]
-pub use self::__ARSCNView::ARSCNViewDelegate;
+pub use self::__camera_frame_provider::ar_camera_video_format_enumerator_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_video_format_t;
+#[cfg(feature = "camera_frame_provider")]
+pub use self::__camera_frame_provider::ar_camera_video_formats_t;
 #[cfg(all(
-    feature = "ARSKView",
-    feature = "ARSession",
-    feature = "objc2",
-    feature = "objc2-sprite-kit"
+    feature = "anchor",
+    feature = "camera_region",
+    feature = "error",
+    feature = "objc2"
 ))]
-pub use self::__ARSKView::ARSKViewDelegate;
-#[cfg(all(feature = "ARSession", feature = "objc2"))]
-pub use self::__ARSession::ARSession;
-#[cfg(all(feature = "ARSession", feature = "objc2"))]
-pub use self::__ARSession::ARSessionDelegate;
-#[cfg(all(feature = "ARSession", feature = "objc2"))]
-pub use self::__ARSession::ARSessionObserver;
-#[cfg(all(feature = "ARSession", feature = "objc2"))]
-pub use self::__ARSession::ARSessionProviding;
-#[cfg(all(feature = "ARSession", feature = "objc2"))]
-pub use self::__ARSession::ARSessionRunOptions;
-#[cfg(all(feature = "ARSkeleton", feature = "objc2"))]
-pub use self::__ARSkeleton::ARSkeleton;
-#[cfg(all(feature = "ARSkeleton", feature = "objc2"))]
-pub use self::__ARSkeleton::ARSkeleton2D;
-#[cfg(all(feature = "ARSkeleton", feature = "objc2"))]
-pub use self::__ARSkeleton::ARSkeleton3D;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonDefinition;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointName;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameHead;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameLeftFoot;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameLeftHand;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameLeftShoulder;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameRightFoot;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameRightHand;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameRightShoulder;
-#[cfg(all(feature = "ARSkeletonDefinition", feature = "objc2-foundation"))]
-pub use self::__ARSkeletonDefinition::ARSkeletonJointNameRoot;
-#[cfg(all(feature = "ARTrackedRaycast", feature = "objc2"))]
-pub use self::__ARTrackedRaycast::ARTrackedRaycast;
-#[cfg(all(feature = "ARTrackingStatusTypes", feature = "objc2"))]
-pub use self::__ARTrackingStatusTypes::ARTrackingState;
-#[cfg(all(feature = "ARTrackingStatusTypes", feature = "objc2"))]
-pub use self::__ARTrackingStatusTypes::ARTrackingStateReason;
-#[cfg(all(feature = "ARVideoFormat", feature = "objc2"))]
-pub use self::__ARVideoFormat::ARVideoFormat;
-#[cfg(all(feature = "ARWorldMap", feature = "objc2"))]
-pub use self::__ARWorldMap::ARWorldMap;
+pub use self::__camera_region::ar_camera_region_add_anchor_completion_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "camera_region",
+    feature = "error",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_add_anchor_completion_handler_t;
+#[cfg(feature = "camera_region")]
+pub use self::__camera_region::ar_camera_region_anchor_t;
+#[cfg(all(feature = "anchor", feature = "camera_region", feature = "objc2"))]
+pub use self::__camera_region::ar_camera_region_anchor_update_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "camera_region",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_anchor_update_handler_t;
+#[cfg(all(feature = "anchor", feature = "camera_region", feature = "objc2"))]
+pub use self::__camera_region::ar_camera_region_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "camera_region",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_anchors_enumerator_t;
+#[cfg(feature = "camera_region")]
+pub use self::__camera_region::ar_camera_region_anchors_t;
+#[cfg(feature = "camera_region")]
+pub use self::__camera_region::ar_camera_region_camera_enhancement_t;
+#[cfg(feature = "camera_region")]
+pub use self::__camera_region::ar_camera_region_configuration_t;
+#[cfg(all(feature = "camera_region", feature = "error"))]
+pub use self::__camera_region::ar_camera_region_error_code_t;
+#[cfg(feature = "camera_region")]
+pub use self::__camera_region::ar_camera_region_provider_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "camera_region",
+    feature = "error",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_remove_anchor_completion_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "camera_region",
+    feature = "error",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_remove_anchor_completion_handler_t;
+#[cfg(all(feature = "camera_region", feature = "error", feature = "objc2"))]
+pub use self::__camera_region::ar_camera_region_remove_anchor_with_identifier_completion_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "camera_region",
+    feature = "error",
+    feature = "objc2"
+))]
+pub use self::__camera_region::ar_camera_region_remove_anchor_with_identifier_completion_handler_t;
+#[cfg(feature = "data")]
+pub use self::__data::ar_data_t;
+#[cfg(feature = "data_provider")]
+pub use self::__data_provider::ar_data_provider_state_t;
+#[cfg(feature = "data_provider")]
+pub use self::__data_provider::ar_data_provider_t;
+#[cfg(all(feature = "data_provider", feature = "objc2"))]
+pub use self::__data_provider::ar_data_providers_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "data_provider", feature = "objc2"))]
+pub use self::__data_provider::ar_data_providers_enumerator_t;
+#[cfg(feature = "data_provider")]
+pub use self::__data_provider::ar_data_providers_t;
+#[cfg(feature = "environment_light_estimation")]
+pub use self::__environment_light_estimation::ar_environment_light_estimation_configuration_t;
+#[cfg(feature = "environment_light_estimation")]
+pub use self::__environment_light_estimation::ar_environment_light_estimation_provider_t;
+#[cfg(all(feature = "environment_light_estimation", feature = "objc2"))]
+pub use self::__environment_light_estimation::ar_environment_light_estimation_update_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "environment_light_estimation",
+    feature = "objc2"
+))]
+pub use self::__environment_light_estimation::ar_environment_light_estimation_update_handler_t;
+#[cfg(feature = "environment_light_estimation")]
+pub use self::__environment_light_estimation::ar_environment_probe_anchor_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "environment_light_estimation",
+    feature = "objc2"
+))]
+pub use self::__environment_light_estimation::ar_environment_probe_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "environment_light_estimation",
+    feature = "objc2"
+))]
+pub use self::__environment_light_estimation::ar_environment_probe_anchors_enumerator_t;
+#[cfg(feature = "environment_light_estimation")]
+pub use self::__environment_light_estimation::ar_environment_probe_anchors_t;
+#[cfg(feature = "error")]
+pub use self::__error::ar_error_code_t;
+#[cfg(all(feature = "error", feature = "objc2-core-foundation"))]
+pub use self::__error::ar_error_domain;
+#[cfg(feature = "error")]
+pub use self::__error::ar_error_t;
+#[cfg(feature = "hand_skeleton")]
+pub use self::__hand_skeleton::ar_hand_skeleton_joint_name_t;
+#[cfg(feature = "hand_skeleton")]
+pub use self::__hand_skeleton::ar_hand_skeleton_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_anchor_query_status_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_anchor_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_chirality_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_fidelity_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_tracking_configuration_t;
+#[cfg(feature = "hand_tracking")]
+pub use self::__hand_tracking::ar_hand_tracking_provider_t;
+#[cfg(all(feature = "anchor", feature = "hand_tracking", feature = "objc2"))]
+pub use self::__hand_tracking::ar_hand_tracking_update_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "hand_tracking",
+    feature = "objc2"
+))]
+pub use self::__hand_tracking::ar_hand_tracking_update_handler_t;
+#[cfg(feature = "identifiers")]
+pub use self::__identifiers::ar_identifiers_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "identifiers"))]
+pub use self::__identifiers::ar_identifiers_enumerator_t;
+#[cfg(feature = "identifiers")]
+pub use self::__identifiers::ar_identifiers_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_image_anchor_t;
+#[cfg(all(feature = "anchor", feature = "image_tracking", feature = "objc2"))]
+pub use self::__image_tracking::ar_image_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "image_tracking",
+    feature = "objc2"
+))]
+pub use self::__image_tracking::ar_image_anchors_enumerator_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_image_anchors_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_image_tracking_configuration_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_image_tracking_provider_t;
+#[cfg(all(feature = "image_tracking", feature = "objc2"))]
+pub use self::__image_tracking::ar_image_tracking_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "image_tracking", feature = "objc2"))]
+pub use self::__image_tracking::ar_image_tracking_update_handler_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_reference_image_t;
+#[cfg(all(feature = "image_tracking", feature = "objc2"))]
+pub use self::__image_tracking::ar_reference_images_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "image_tracking", feature = "objc2"))]
+pub use self::__image_tracking::ar_reference_images_enumerator_t;
+#[cfg(feature = "image_tracking")]
+pub use self::__image_tracking::ar_reference_images_t;
+#[cfg(feature = "object")]
+pub use self::__object::ar_release;
+#[cfg(feature = "object")]
+pub use self::__object::ar_retain;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_object_anchor_t;
+#[cfg(all(feature = "anchor", feature = "objc2", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_object_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "objc2",
+    feature = "object_tracking"
+))]
+pub use self::__object_tracking::ar_object_anchors_enumerator_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_object_anchors_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_object_axis_aligned_bounding_box_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_object_tracking_configuration_t;
+#[cfg(all(feature = "error", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_object_tracking_error_code_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_object_tracking_provider_t;
+#[cfg(all(feature = "objc2", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_object_tracking_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_object_tracking_update_handler_t;
+#[cfg(all(
+    feature = "error",
+    feature = "objc2",
+    feature = "objc2-core-foundation",
+    feature = "object_tracking"
+))]
+pub use self::__object_tracking::ar_reference_object_bundle_load_completion_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "objc2-core-foundation",
+    feature = "object_tracking"
+))]
+pub use self::__object_tracking::ar_reference_object_bundle_load_completion_handler_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_reference_object_t;
+#[cfg(all(
+    feature = "error",
+    feature = "objc2",
+    feature = "objc2-core-foundation",
+    feature = "object_tracking"
+))]
+pub use self::__object_tracking::ar_reference_object_url_load_completion_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "objc2-core-foundation",
+    feature = "object_tracking"
+))]
+pub use self::__object_tracking::ar_reference_object_url_load_completion_handler_t;
+#[cfg(all(feature = "objc2", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_reference_objects_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "object_tracking"))]
+pub use self::__object_tracking::ar_reference_objects_enumerator_t;
+#[cfg(feature = "object_tracking")]
+pub use self::__object_tracking::ar_reference_objects_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_alignment_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_anchor_t;
+#[cfg(all(feature = "anchor", feature = "objc2", feature = "plane_detection"))]
+pub use self::__plane_detection::ar_plane_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "objc2",
+    feature = "plane_detection"
+))]
+pub use self::__plane_detection::ar_plane_anchors_enumerator_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_anchors_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_classification_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_detection_configuration_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_detection_provider_t;
+#[cfg(all(feature = "objc2", feature = "plane_detection"))]
+pub use self::__plane_detection::ar_plane_detection_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "plane_detection"))]
+pub use self::__plane_detection::ar_plane_detection_update_handler_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_extent_t;
+#[cfg(feature = "plane_detection")]
+pub use self::__plane_detection::ar_plane_geometry_t;
+#[cfg(feature = "room_tracking")]
+pub use self::__room_tracking::ar_room_anchor_t;
+#[cfg(all(feature = "anchor", feature = "objc2", feature = "room_tracking"))]
+pub use self::__room_tracking::ar_room_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "objc2",
+    feature = "room_tracking"
+))]
+pub use self::__room_tracking::ar_room_anchors_enumerator_t;
+#[cfg(feature = "room_tracking")]
+pub use self::__room_tracking::ar_room_anchors_t;
+#[cfg(feature = "room_tracking")]
+pub use self::__room_tracking::ar_room_tracking_configuration_t;
+#[cfg(feature = "room_tracking")]
+pub use self::__room_tracking::ar_room_tracking_provider_t;
+#[cfg(all(feature = "objc2", feature = "room_tracking"))]
+pub use self::__room_tracking::ar_room_tracking_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "room_tracking"))]
+pub use self::__room_tracking::ar_room_tracking_update_handler_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_geometry_element_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_geometry_primitive_type_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_geometry_source_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_mesh_anchor_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "objc2",
+    feature = "scene_reconstruction"
+))]
+pub use self::__scene_reconstruction::ar_mesh_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "objc2",
+    feature = "scene_reconstruction"
+))]
+pub use self::__scene_reconstruction::ar_mesh_anchors_enumerator_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_mesh_anchors_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_mesh_classification_t;
+#[cfg(all(feature = "objc2", feature = "scene_reconstruction"))]
+pub use self::__scene_reconstruction::ar_mesh_geometries_enumerator_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "objc2",
+    feature = "scene_reconstruction"
+))]
+pub use self::__scene_reconstruction::ar_mesh_geometries_enumerator_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_mesh_geometries_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_mesh_geometry_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_scene_reconstruction_configuration_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_scene_reconstruction_mode_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_scene_reconstruction_provider_t;
+#[cfg(all(feature = "objc2", feature = "scene_reconstruction"))]
+pub use self::__scene_reconstruction::ar_scene_reconstruction_update_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "objc2",
+    feature = "scene_reconstruction"
+))]
+pub use self::__scene_reconstruction::ar_scene_reconstruction_update_handler_t;
+#[cfg(feature = "scene_reconstruction")]
+pub use self::__scene_reconstruction::ar_surface_classification_t;
+#[cfg(all(
+    feature = "authorization",
+    feature = "error",
+    feature = "objc2",
+    feature = "session"
+))]
+pub use self::__session::ar_authorization_results_handler_function_t;
+#[cfg(all(
+    feature = "authorization",
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "session"
+))]
+pub use self::__session::ar_authorization_results_handler_t;
+#[cfg(all(feature = "authorization", feature = "objc2", feature = "session"))]
+pub use self::__session::ar_authorization_update_handler_function_t;
+#[cfg(all(
+    feature = "authorization",
+    feature = "block2",
+    feature = "objc2",
+    feature = "session"
+))]
+pub use self::__session::ar_authorization_update_handler_t;
+#[cfg(feature = "session")]
+pub use self::__session::ar_device_t;
+#[cfg(all(
+    feature = "data_provider",
+    feature = "error",
+    feature = "objc2",
+    feature = "session"
+))]
+pub use self::__session::ar_session_data_provider_state_change_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "data_provider",
+    feature = "error",
+    feature = "objc2",
+    feature = "session"
+))]
+pub use self::__session::ar_session_data_provider_state_change_handler_t;
+#[cfg(all(feature = "error", feature = "session"))]
+pub use self::__session::ar_session_error_code_t;
+#[cfg(feature = "session")]
+pub use self::__session::ar_session_t;
+#[cfg(feature = "shared_coordinate_space")]
+pub use self::__shared_coordinate_space::ar_coordinate_space_data_t;
+#[cfg(all(
+    feature = "data_provider",
+    feature = "dispatch2",
+    feature = "identifiers",
+    feature = "objc2",
+    feature = "shared_coordinate_space"
+))]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_provider_set_connected_participants_update_handler_f;
+#[cfg(feature = "shared_coordinate_space")]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_configuration_t;
+#[cfg(all(
+    feature = "identifiers",
+    feature = "objc2",
+    feature = "shared_coordinate_space"
+))]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_connected_participants_update_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "identifiers",
+    feature = "objc2",
+    feature = "shared_coordinate_space"
+))]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_connected_participants_update_handler_t;
+#[cfg(feature = "shared_coordinate_space")]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_provider_t;
+#[cfg(all(feature = "block2", feature = "shared_coordinate_space"))]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_sharing_status_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "shared_coordinate_space"))]
+pub use self::__shared_coordinate_space::ar_shared_coordinate_space_sharing_status_update_handler_t;
+#[cfg(all(feature = "objc2", feature = "skeleton_joint"))]
+pub use self::__skeleton_joint::ar_skeleton_joint_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "skeleton_joint"))]
+pub use self::__skeleton_joint::ar_skeleton_joint_enumerator_t;
+#[cfg(feature = "skeleton_joint")]
+pub use self::__skeleton_joint::ar_skeleton_joint_t;
+#[cfg(feature = "stereo_properties")]
+pub use self::__stereo_properties::ar_stereo_properties_configuration_t;
+#[cfg(feature = "stereo_properties")]
+pub use self::__stereo_properties::ar_stereo_properties_provider_t;
+#[cfg(feature = "stereo_properties")]
+pub use self::__stereo_properties::ar_viewpoint_properties_t;
+#[cfg(feature = "strings_collection")]
+pub use self::__strings_collection::ar_strings_enumerator_function_t;
+#[cfg(all(feature = "block2", feature = "strings_collection"))]
+pub use self::__strings_collection::ar_strings_enumerator_t;
+#[cfg(feature = "strings_collection")]
+pub use self::__strings_collection::ar_strings_t;
+#[cfg(feature = "transform_correction")]
+pub use self::__transform_correction::ar_transform_correction_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_device_anchor_query_status_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_device_anchor_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_device_anchor_tracking_state_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_anchor_sharing_availability_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_anchor_sharing_availability_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_anchor_sharing_availability_update_handler_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_anchor_t;
+#[cfg(all(feature = "anchor", feature = "objc2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_anchors_enumerator_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_anchors_enumerator_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_anchors_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_add_anchor_completion_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_add_anchor_completion_handler_t;
+#[cfg(all(feature = "objc2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_tracking_anchor_update_handler_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_tracking_anchor_update_handler_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_tracking_configuration_t;
+#[cfg(all(feature = "error", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_tracking_error_code_t;
+#[cfg(all(feature = "objc2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_tracking_provider_copy_all_world_anchors_completion_function_t;
+#[cfg(all(feature = "block2", feature = "objc2", feature = "world_tracking"))]
+pub use self::__world_tracking::ar_world_tracking_provider_copy_all_world_anchors_completion_handler_t;
+#[cfg(feature = "world_tracking")]
+pub use self::__world_tracking::ar_world_tracking_provider_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_remove_all_anchors_completion_handler_function_t;
+#[cfg(all(
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_remove_all_anchors_completion_handler_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_remove_anchor_completion_handler_function_t;
+#[cfg(all(
+    feature = "anchor",
+    feature = "block2",
+    feature = "error",
+    feature = "objc2",
+    feature = "world_tracking"
+))]
+pub use self::__world_tracking::ar_world_tracking_remove_anchor_completion_handler_t;
